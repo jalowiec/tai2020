@@ -1,11 +1,18 @@
 package com.edu.agh.tai.quotesservice;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class QuotesServiceController {
@@ -17,17 +24,24 @@ public class QuotesServiceController {
     //TODO sprawdzenie konwencji
 
 
-    @GetMapping("/quote")
+    @GetMapping("/quotes")
     public QuoteDto getQuote(){
-        List<Tag> tagList = new ArrayList<>();
-        tagList.add(new Tag("future"));
-        tagList.add(new Tag("evolution"));
-        tagList.add(new Tag("ethics"));
+        return quoteMapper.quoteToQuoteDto(getExternalQuote());
+    }
 
-        Quote quote = new Quote("[...] consciousness is often said to be ill-defined. Yet if physicalistic idealism is true, then we already possess the mathematical apparatus of a theory of consciousness. All that’s hard is to “read off” the textures of experience from the solutions to the equations.", "en", "David Pearce", tagList);
+    private Quote getExternalQuote(){
+        final String uri = "https://opinionated-quotes-api.gigalixirapp.com/v1/quotes";
+        RestTemplate restTemplate = new RestTemplate();
+        String result = restTemplate.getForObject(uri, String.class);
+        JsonObject jsonObject = JsonParser.parseString(result).getAsJsonObject();
+        JsonObject jsonQuoteObject = jsonObject.getAsJsonArray("quotes").get(0).getAsJsonObject();
+        String quote = jsonQuoteObject.get("quote").getAsString();
+        String author = "Unknown";
+        if(jsonQuoteObject.get("author") != null){
+            author = jsonQuoteObject.get("author").getAsString();
+        }
 
-        return quoteMapper.quoteToQuoteDto(quote);
-
+        return new Quote(quote, author);
     }
 
 

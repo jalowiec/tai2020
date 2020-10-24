@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class QuoteMapper {
 
     public QuoteDto quoteToQuoteDto(final Quote quote){
-        return new QuoteDto(quote.getContent(),  quote.getAuthor());
+        return new QuoteDto(quote.getContent(), quote.getAuthor());
     }
 
 }

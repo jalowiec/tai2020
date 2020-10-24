@@ -1,7 +1,6 @@
 package com.edu.agh.tai.quotesservice;
 public class QuoteDto {
     private String content;
-    private String lang;
     private String author;
 
     public QuoteDto(String content, String author) {
