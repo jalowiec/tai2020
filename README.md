@@ -8,7 +8,7 @@
 | Eureka Naming Service | 8761 |
 
 
-<h2>Uczestnicy>/h2>
+<h2>Uczestnicy</h2>
 • Jałowiecki Łukasz <br/>
 • Krakowski Kamil <br>
 
