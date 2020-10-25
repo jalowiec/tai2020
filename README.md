@@ -5,6 +5,7 @@
 |     Application       |     Port          |
 | ------------- | ------------- |
 | Quotes Service | 8080, 8081, ... |
+| Eureka Naming Service | 8761 |
 
 
 <h2>Uczestnicy>/h2>
