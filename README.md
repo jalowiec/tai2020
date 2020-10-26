@@ -6,6 +6,7 @@
 | ------------- | ------------- |
 | Quotes Service | 8080, 8081, ... |
 | Eureka Naming Service | 8761 |
+| Netflix Zuul API Gateway Server | 8765 |
 
 
 <h2>Uczestnicy</h2>
