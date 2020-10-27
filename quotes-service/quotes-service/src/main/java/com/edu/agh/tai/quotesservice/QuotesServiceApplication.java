@@ -1,8 +1,10 @@
 package com.edu.agh.tai.quotesservice;
 
+import brave.sampler.Sampler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Bean;
 
 //TODO testy jednostkowe
 @SpringBootApplication
@@ -13,4 +15,8 @@ public class QuotesServiceApplication {
 		SpringApplication.run(QuotesServiceApplication.class, args);
 	}
 
+	@Bean
+	public Sampler defaultSampler(){
+		return Sampler.ALWAYS_SAMPLE;
+	}
 }

@@ -5,8 +5,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/java/pl/edu/agh/tai/netflixzuulapigatewayserver/ZuulLoggingFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_context_slf4j_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_http_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_httpasyncclient_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_httpclient_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_jms_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_kafka_clients_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_kafka_streams_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_messaging_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_rpc_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_servlet_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_rabbit_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_web_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_webmvc_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_brave_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_metrics_micrometer_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_activemq_client_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_amqp_client_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_kafka_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_zipkin2_zipkin_2_21_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_2_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_2_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_core_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_zipkin_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_sleuth_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_zipkin_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_2_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_context_slf4j_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_http_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_httpasyncclient_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_httpclient_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_jms_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_kafka_clients_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_kafka_streams_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_messaging_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_rpc_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_servlet_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_rabbit_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_web_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_brave_brave_instrumentation_spring_webmvc_5_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_brave_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_metrics_micrometer_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_activemq_client_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_amqp_client_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_kafka_2_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_zipkin_zipkin2_zipkin_2_21_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_2_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_2_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_core_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_zipkin_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_sleuth_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_zipkin_2_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_spring_messaging_5_2_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_spring_tx_5_2_9_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-eureka-naming-server/netflix-eureka-naming-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-eureka-naming-server/netflix-eureka-naming-server/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/java/pl/edu/agh/tai/netflixzuulapigatewayserver/NetflixZuulApiGatewayServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/java/pl/edu/agh/tai/netflixzuulapigatewayserver/NetflixZuulApiGatewayServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +114,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -51,17 +123,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NetflixZuulApiGatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="netflix-zuul-api-gateway-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pl.edu.agh.tai.netflixzuulapigatewayserver.NetflixZuulApiGatewayServerApplication" />
@@ -79,7 +140,10 @@
       <option name="presentableId" value="Default" />
       <updated>1603656902716</updated>
       <workItem from="1603656903911" duration="1412000" />
-      <workItem from="1603740523541" duration="2622000" />
+      <workItem from="1603740523541" duration="2853000" />
+      <workItem from="1603816235380" duration="747000" />
+      <workItem from="1603817332957" duration="2090000" />
+      <workItem from="1603829090059" duration="3061000" />
     </task>
     <servers />
   </component>
@@ -91,37 +155,37 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603740853042" />
-    <state width="1877" height="595" key="GridCell.Tab.0.bottom" timestamp="1603743160326">
+    <state width="1877" height="326" key="GridCell.Tab.0.bottom" timestamp="1603832818404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="595" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603743160326" />
-    <state width="1877" height="595" key="GridCell.Tab.0.center" timestamp="1603743160326">
+    <state width="1877" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603832818404" />
+    <state width="1877" height="326" key="GridCell.Tab.0.center" timestamp="1603832818404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="595" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603743160326" />
-    <state width="1877" height="595" key="GridCell.Tab.0.left" timestamp="1603743160326">
+    <state width="1877" height="326" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603832818404" />
+    <state width="1877" height="326" key="GridCell.Tab.0.left" timestamp="1603832818404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="595" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603743160326" />
-    <state width="1877" height="595" key="GridCell.Tab.0.right" timestamp="1603743160326">
+    <state width="1877" height="326" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603832818404" />
+    <state width="1877" height="326" key="GridCell.Tab.0.right" timestamp="1603832818404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="595" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603743160326" />
-    <state width="1877" height="595" key="GridCell.Tab.1.bottom" timestamp="1603743160326">
+    <state width="1877" height="326" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603832818404" />
+    <state width="1877" height="326" key="GridCell.Tab.1.bottom" timestamp="1603832818404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="595" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603743160326" />
-    <state width="1877" height="595" key="GridCell.Tab.1.center" timestamp="1603743160326">
+    <state width="1877" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603832818404" />
+    <state width="1877" height="326" key="GridCell.Tab.1.center" timestamp="1603832818404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="595" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603743160326" />
-    <state width="1877" height="595" key="GridCell.Tab.1.left" timestamp="1603743160326">
+    <state width="1877" height="326" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603832818404" />
+    <state width="1877" height="326" key="GridCell.Tab.1.left" timestamp="1603832818404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="595" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603743160326" />
-    <state width="1877" height="595" key="GridCell.Tab.1.right" timestamp="1603743160326">
+    <state width="1877" height="326" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603832818404" />
+    <state width="1877" height="326" key="GridCell.Tab.1.right" timestamp="1603832818404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="595" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603743160326" />
+    <state width="1877" height="326" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603832818404" />
   </component>
 </project>
