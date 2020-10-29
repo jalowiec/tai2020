@@ -1,20 +1,15 @@
 package com.edu.agh.tai.quotesservice;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @RestController
 public class QuotesServiceController {
@@ -29,6 +24,7 @@ public class QuotesServiceController {
 
 
     @GetMapping("/quotes")
+    @HystrixCommand(fallbackMethod = "getDefaultQuote")
     public QuoteDto getQuote(){
         return quoteMapper.quoteToQuoteDto(getExternalQuote());
     }
@@ -49,6 +45,14 @@ public class QuotesServiceController {
 
         return new Quote(quote, author);
     }
+
+    private QuoteDto getDefaultQuote(){
+
+        logger.info("{}", "default author" + ":" + "default quote");
+
+        return new QuoteDto("Always look on the bright side of life", "Unknown");
+    }
+
 
 
 }
