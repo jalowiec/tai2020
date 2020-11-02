@@ -4,7 +4,8 @@
 
 |     Application       |     Port          |
 | ------------- | ------------- |
-| Quotes Service | 8080, 8081, ... |
+| Quotes Service | 8000, 8001, ... |
+| Images Service | 8100, 8101, ... |
 | Eureka Naming Service | 8761 |
 | Netflix Zuul API Gateway Server | 8765 |
 
