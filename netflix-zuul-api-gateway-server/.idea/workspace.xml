@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__com_netflix_hystrix_hystrix_javanica_1_5_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__com_netflix_hystrix_hystrix_serialization_1_5_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__io_reactivex_rxjava_reactive_streams_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../quotes-service/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_hystrix_2_2_5_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +73,7 @@
       <workItem from="1603817332957" duration="2090000" />
       <workItem from="1603829090059" duration="3061000" />
       <workItem from="1604008858609" duration="562000" />
+      <workItem from="1604835816332" duration="663000" />
     </task>
     <servers />
   </component>
@@ -94,37 +85,37 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603740853042" />
-    <state width="1877" height="326" key="GridCell.Tab.0.bottom" timestamp="1604009420482">
+    <state width="1877" height="326" key="GridCell.Tab.0.bottom" timestamp="1604836693515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604009420482" />
-    <state width="1877" height="326" key="GridCell.Tab.0.center" timestamp="1604009420481">
+    <state width="1877" height="326" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604836693515" />
+    <state width="1877" height="326" key="GridCell.Tab.0.center" timestamp="1604836693514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="326" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604009420481" />
-    <state width="1877" height="326" key="GridCell.Tab.0.left" timestamp="1604009420481">
+    <state width="1877" height="326" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604836693514" />
+    <state width="1877" height="326" key="GridCell.Tab.0.left" timestamp="1604836693514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="326" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604009420481" />
-    <state width="1877" height="326" key="GridCell.Tab.0.right" timestamp="1604009420482">
+    <state width="1877" height="326" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604836693514" />
+    <state width="1877" height="326" key="GridCell.Tab.0.right" timestamp="1604836693515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="326" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604009420482" />
-    <state width="1877" height="326" key="GridCell.Tab.1.bottom" timestamp="1604009420482">
+    <state width="1877" height="326" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604836693515" />
+    <state width="1877" height="326" key="GridCell.Tab.1.bottom" timestamp="1604836693516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604009420482" />
-    <state width="1877" height="326" key="GridCell.Tab.1.center" timestamp="1604009420482">
+    <state width="1877" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604836693516" />
+    <state width="1877" height="326" key="GridCell.Tab.1.center" timestamp="1604836693515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="326" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604009420482" />
-    <state width="1877" height="326" key="GridCell.Tab.1.left" timestamp="1604009420482">
+    <state width="1877" height="326" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604836693515" />
+    <state width="1877" height="326" key="GridCell.Tab.1.left" timestamp="1604836693515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="326" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604009420482" />
-    <state width="1877" height="326" key="GridCell.Tab.1.right" timestamp="1604009420482">
+    <state width="1877" height="326" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604836693515" />
+    <state width="1877" height="326" key="GridCell.Tab.1.right" timestamp="1604836693516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="326" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604009420482" />
+    <state width="1877" height="326" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604836693516" />
   </component>
 </project>
