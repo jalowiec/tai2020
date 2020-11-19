@@ -9,4 +9,8 @@ public class QuoteMapper {
         return new QuoteDto(quote.getContent(), quote.getAuthor());
     }
 
+
+
+
+
 }
