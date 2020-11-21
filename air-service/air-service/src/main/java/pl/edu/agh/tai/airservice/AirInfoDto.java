@@ -4,12 +4,12 @@ public class AirInfoDto {
 
     private String description;
     private String advice;
-    private int color;
+    private String color;
 
     public AirInfoDto() {
     }
 
-    public AirInfoDto(String description, String advice, int color) {
+    public AirInfoDto(String description, String advice, String color) {
         this.description = description;
         this.advice = advice;
         this.color = color;
@@ -23,7 +23,7 @@ public class AirInfoDto {
         return advice;
     }
 
-    public int getColor() {
+    public String getColor() {
         return color;
     }
 }

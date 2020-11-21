@@ -31,28 +31,30 @@ public class AirInfoServiceController {
     }
 
     private AirInfo getExternalAirInfo(){
-        final String airlyKey = "lG5RZe9W6Adcnt7MYudggTpWbHyoWvkM";
+        AirInfo airInfo;
         final String uri = "https://airapi.airly.eu/v2/measurements/point?lat=50.067879&lng=19.912863&apikey=lG5RZe9W6Adcnt7MYudggTpWbHyoWvkM";
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class);
-        JsonObject jsonObject = JsonParser.parseString(result).getAsJsonObject();
-        JsonObject jsonQuoteObject = jsonObject.getAsJsonArray("quotes").get(0).getAsJsonObject();
-        String quote = jsonQuoteObject.get("quote").getAsString();
-        String author = "Unknown";
-        if(jsonQuoteObject.get("author") != null){
-            author = jsonQuoteObject.get("author").getAsString();
+        JsonObject jsonObject = JsonParser.parseString(result).getAsJsonObject().getAsJsonObject("current").getAsJsonArray("indexes").get(0).getAsJsonObject();
+
+        String airDescription = jsonObject.get("description").getAsString();
+        String airAdvice = jsonObject.get("advice").getAsString();
+        String airColor = jsonObject.get("color").getAsString();
+
+        if(airDescription != null && airAdvice != null && airColor != null) {
+            airInfo = new AirInfo(airDescription, airAdvice, airColor);
+        } else {
+            airInfo = airInfoMapper.airInfoDtoToAirInfo(getDefaultAirInfo());
         }
 
-        logger.info("{}", author + ":" + quote.substring(0, 5));
+        logger.info("{}", airDescription + ":" + airAdvice + ":" + airColor);
 
-        return new AirInfo("No current info", "Check outside", 0XFF0000);
+        return airInfo;
     }
 
     private AirInfoDto getDefaultAirInfo(){
 
-        logger.info("{}", "default author" + ":" + "default quote");
-
-        return new AirInfoDto("No current info", "Check outside", 0XFF0000);
+        return new AirInfoDto("No current info", "Check outside", "#FF0000");
     }
 
 

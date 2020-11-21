@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19627792-ea2d-411f-8065-5043da037701" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_2_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_reporter_brave_2_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_activemq_client_2_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_amqp_client_2_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_reporter2_zipkin_sender_kafka_2_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_zipkin_zipkin2_zipkin_2_22_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_core_3_0_0_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_sleuth_zipkin_3_0_0_SNAPSHOT.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_sleuth_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_zipkin_2_2_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,17 +60,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AirServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="air-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pl.edu.agh.tai.airservice.AirServiceApplication" />
@@ -101,7 +76,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605810629557</updated>
-      <workItem from="1605810631504" duration="6463000" />
+      <workItem from="1605810631504" duration="6909000" />
+      <workItem from="1605989537881" duration="5275000" />
     </task>
     <servers />
   </component>
@@ -113,37 +89,41 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605813367361" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1605816963207">
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1605993763825">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605816963207" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1605816963207">
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605993763825" />
+    <state width="1877" height="342" key="GridCell.Tab.0.bottom" timestamp="1605994666915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605816963207" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1605816963206">
+    <state width="1877" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605994666915" />
+    <state width="1877" height="342" key="GridCell.Tab.0.center" timestamp="1605994666914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605816963206" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1605816963207">
+    <state width="1877" height="342" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605994666914" />
+    <state width="1877" height="342" key="GridCell.Tab.0.left" timestamp="1605994666914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605816963207" />
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1605816963208">
+    <state width="1877" height="342" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605994666914" />
+    <state width="1877" height="342" key="GridCell.Tab.0.right" timestamp="1605994666915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605816963208" />
-    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1605816963208">
+    <state width="1877" height="342" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605994666915" />
+    <state width="1877" height="342" key="GridCell.Tab.1.bottom" timestamp="1605994666916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605816963208" />
-    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1605816963207">
+    <state width="1877" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605994666916" />
+    <state width="1877" height="342" key="GridCell.Tab.1.center" timestamp="1605994666915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605816963207" />
-    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1605816963208">
+    <state width="1877" height="342" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605994666915" />
+    <state width="1877" height="342" key="GridCell.Tab.1.left" timestamp="1605994666915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605816963208" />
+    <state width="1877" height="342" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605994666915" />
+    <state width="1877" height="342" key="GridCell.Tab.1.right" timestamp="1605994666915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="342" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605994666915" />
   </component>
 </project>

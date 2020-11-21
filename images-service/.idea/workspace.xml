@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92d6c6ac-7602-47b5-b50a-bf2ac5978187" name="Default Changelist" comment="" />
+    <list default="true" id="92d6c6ac-7602-47b5-b50a-bf2ac5978187" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +79,7 @@
       <workItem from="1605214586733" duration="806000" />
       <workItem from="1605216178671" duration="382000" />
       <workItem from="1605799885487" duration="612000" />
+      <workItem from="1605989580022" duration="782000" />
     </task>
     <servers />
   </component>

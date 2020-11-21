@@ -9,8 +9,9 @@ public class AirInfoMapper {
         return new AirInfoDto(airInfo.getDescription(), airInfo.getAdvice(), airInfo.getColor());
     }
 
-
-
+    public AirInfo airInfoDtoToAirInfo(final AirInfoDto airInfoDto){
+        return new AirInfo(airInfoDto.getDescription(), airInfoDto.getAdvice(), airInfoDto.getColor());
+    }
 
 
 }
