@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+    eureka:
+        build: netflix-eureka-naming-server/netflix-eureka-naming-server
+        ports:
+        - "8761:8761"
+    api-gateway:
+        build: netflix-zuul-api-gateway-server/netflix-zuul-api-gateway-server
+        ports:
+        - "8765:8765"        
+    air-service:
+        build: air-service/air-service
+        ports:
+        - "8300:8300" 
+    quotes-service:
+        build: quotes-service/quotes-service
+        ports:
+        - "8000:8000"
+    images-service:
+        build: images-service/images-service
+        ports:
+        - "8100:8100"        
