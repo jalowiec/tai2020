@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="92d6c6ac-7602-47b5-b50a-bf2ac5978187" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,7 @@
       <workItem from="1605989580022" duration="783000" />
       <workItem from="1606042996456" duration="629000" />
       <workItem from="1606248146360" duration="877000" />
-      <workItem from="1606404149719" duration="325000" />
+      <workItem from="1606404149719" duration="1010000" />
     </task>
     <servers />
   </component>
