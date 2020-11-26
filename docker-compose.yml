@@ -4,7 +4,7 @@ services:
     mysql:
         image: mysql
         environment:
-        - MYSQL_ROOT_PASSWORD=katasia75
+        - MYSQL_ROOT_PASSWORD=task_crud
         - MYSQL_DATABASE=task_crud
         - MYSQL_USER=task
         - MYSQL_PASSWORD=task
@@ -54,11 +54,11 @@ services:
         - eureka
         - mysql
         environment: 
-        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/     
-        - DATABASE_HOST=mysql
-        - DATABASE_USER=task
-        - DATABASE_PASSWORD=task
-        - DATABASE_NAME=task_crud
-        - DATABASE_PORT=3306     
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/  
+        - SPRING_DATASOURCE_USERNAME=task
+        - SPRING_DATASOURCE_PASSWORD=task        
+        - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/task_crud?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true
+
+        
         
         
