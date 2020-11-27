@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/quote-manager/users/{id}")
+@RequestMapping("/users/{id}")
 @CrossOrigin(origins = "*")
 public class QuotesServiceController {
 

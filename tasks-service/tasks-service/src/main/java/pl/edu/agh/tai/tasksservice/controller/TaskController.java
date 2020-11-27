@@ -12,7 +12,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping("/task-manager/users/{id}")
+@RequestMapping("/users/{id}")
 @CrossOrigin(origins = "*")
 public class TaskController {
 

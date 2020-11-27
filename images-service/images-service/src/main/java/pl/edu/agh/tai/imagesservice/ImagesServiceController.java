@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/image-manager/users/{id}")
+@RequestMapping("/users/{id}")
 public class ImagesServiceController {
 
     @Autowired
