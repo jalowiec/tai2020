@@ -1,0 +1,65 @@
+version: "3.8"
+services:
+
+    mysql:
+        image: mysql
+        environment:
+        - MYSQL_ROOT_PASSWORD=task_crud
+        - MYSQL_DATABASE=task_crud
+        - MYSQL_USER=task
+        - MYSQL_PASSWORD=task
+        ports:
+        - "3306:3306"
+    eureka:
+        build: netflix-eureka-naming-server/netflix-eureka-naming-server
+        ports:
+        - "8761:8761"
+    api-gateway:
+        build: netflix-zuul-api-gateway-server/netflix-zuul-api-gateway-server
+        ports:
+        - "8765:8765"
+        depends_on:
+        - eureka
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
+    air-service:
+        build: air-service/air-service
+        ports:
+        - "8300:8300" 
+        depends_on:
+        - eureka
+        - api-gateway
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+    quotes-service:
+        build: quotes-service/quotes-service
+        ports:
+        - "8000:8000"
+        depends_on:
+        - eureka
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
+    images-service:
+        build: images-service/images-service
+        ports:
+        - "8100:8100"
+        depends_on:
+        - eureka
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
+    tasks-service:
+        build: tasks-service/tasks-service
+        ports:
+        - "8200:8200"
+        depends_on:
+        - eureka
+        - mysql
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/  
+        - SPRING_DATASOURCE_USERNAME=task
+        - SPRING_DATASOURCE_PASSWORD=task        
+        - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/task_crud?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true
+
+        
+        
+        

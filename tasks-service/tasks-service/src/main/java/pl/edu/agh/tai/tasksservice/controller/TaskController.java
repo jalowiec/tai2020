@@ -12,8 +12,8 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping("/v1")
-@CrossOrigin(origins = "*") 
+@RequestMapping("/users/{id}")
+@CrossOrigin(origins = "*")
 public class TaskController {
 
 
@@ -37,10 +37,10 @@ public class TaskController {
         return taskMapper.mapToTaskDto(service.getTaskById(taskId).orElseThrow(TaskNotFoundException::new));
     }
 
-  //  @RequestMapping(method = RequestMethod.DELETE, value = "/tasks/{taskId}")
-//    public void deleteTask(@PathVariable Long taskId){
-  //      service.deleteTask(taskId);
-  //  }
+    @RequestMapping(method = RequestMethod.DELETE, value = "/tasks/{taskId}")
+    public void deleteTask(@PathVariable Long taskId){
+        service.deleteTask(taskId);
+    }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/tasks")
     public TaskDto updateTask(@RequestBody TaskDto taskDto){
