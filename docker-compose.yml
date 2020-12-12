@@ -14,6 +14,22 @@ services:
         build: netflix-eureka-naming-server/netflix-eureka-naming-server
         ports:
         - "8761:8761"
+    rabbitmq:
+        image: rabbitmq:management
+        ports:
+        - "5672:5672"
+        - "15672:15672"        
+    zipkin:
+        image: openzipkin/zipkin
+        environment: 
+        - STORAGE_TYPE=mysql
+        - MYSQL_HOST=mysql
+        - RABBIT_HOST=rabbitmq        
+        ports:
+        - "9411:9411"        
+        depends_on:
+        - rabbitmq
+        - mysql
     api-gateway:
         build: netflix-zuul-api-gateway-server/netflix-zuul-api-gateway-server
         ports:

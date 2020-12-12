@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../images-service/images-service/src/main/java/pl/edu/agh/tai/imagesservice/ImagesServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/images-service/src/main/java/pl/edu/agh/tai/imagesservice/ImagesServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" afterDir="false" />
-    </list>
+    <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +77,7 @@
       <workItem from="1606423507782" duration="5209000" />
       <workItem from="1606431633884" duration="531000" />
       <workItem from="1606462030479" duration="273000" />
+      <workItem from="1606478827289" duration="227000" />
     </task>
     <servers />
   </component>
