@@ -12,6 +12,17 @@
 | Netflix Zuul API Gateway Server | 8765 |
 
 
+## Gateways
+
+|     Application       |     EndPoint          |
+| ------------- | ------------- |
+| Quotes Service | /api/quote/users/{id}/quotes/quote |
+| Images Service | /api/image/users/{id}/images/image |
+| Tasks Service | /api/task/users/{id}/tasks |
+| Air Service | /api/air/users/{id}/air-infos/air-info |
+| Netflix Zuul API Gateway Server | localhost:8765 |
+
+
 <h2>Uczestnicy</h2>
 • Jałowiecki Łukasz <br/>
 • Krakowski Kamil <br>
