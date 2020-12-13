@@ -10,6 +10,7 @@
 | Air Service | 8300, 8301, ... |
 | Eureka Naming Service | 8761 |
 | Netflix Zuul API Gateway Server | 8765 |
+| Zipkin | 9411 |
 
 
 ## Gateways
