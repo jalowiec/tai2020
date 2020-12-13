@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:spring-cloud-sleuth-brave:3.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-sleuth-brave/3.0.0-SNAPSHOT/spring-cloud-sleuth-brave-3.0.0-20201213.053022-141.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-sleuth-brave/3.0.0-SNAPSHOT/spring-cloud-sleuth-brave-3.0.0-20201213.053022-141-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-sleuth-brave/3.0.0-SNAPSHOT/spring-cloud-sleuth-brave-3.0.0-20201213.053022-141-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
