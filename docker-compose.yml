@@ -34,8 +34,8 @@ services:
         - "8300:8300" 
         depends_on:
         - eureka
-        - api-gateway
         - zipkin
+        - api-gateway
         environment: 
         - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
         - spring.zipkin.baseUrl=http://zipkin:9411/        
