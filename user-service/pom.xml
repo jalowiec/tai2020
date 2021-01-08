@@ -6,23 +6,26 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.4.0</version>
 	</parent>
-	<groupId>com.packtpub.mmj</groupId>
+	<groupId>pl.edu.agh.tai</groupId>
 	<artifactId>userservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>userservice</name>
 	<description>userservice</description>
 	<properties>
+		<java.version>11</java.version>
+		<spring-cloud.version>2020.0.0-SNAPSHOT</spring-cloud.version>
+		<!--
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring-boot-version>2.4.0</spring-boot-version>
 		<maven.compiler.source>15</maven.compiler.source>
 		<maven.compiler.target>15</maven.compiler.target>
+		-->
 	</properties>
-	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>${spring-boot-version}</version>
+			<version>2.4.0</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
@@ -33,13 +36,35 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jetty</artifactId>
-			<version>${spring-boot-version}</version>
+			<version>2.4.0</version>
 		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.22</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>${spring-boot-version}</version>
+			<version>2.4.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.4.27.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
