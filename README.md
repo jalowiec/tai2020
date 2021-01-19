@@ -8,6 +8,7 @@
 | Images Service | 8100, 8101, ... |
 | Tasks Service | 8200, 8201, ... |
 | Air Service | 8300, 8301, ... |
+| User Service | 8080, 8080, ... |
 | Eureka Naming Service | 8761 |
 | Netflix Zuul API Gateway Server | 8765 |
 | Zipkin | 9411 |
