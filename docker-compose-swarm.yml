@@ -1,0 +1,88 @@
+version: "3.8"
+services:
+
+    mysql:
+        image: mysql
+        environment:
+        - MYSQL_ROOT_PASSWORD=task_crud
+        - MYSQL_DATABASE=task_crud
+        - MYSQL_USER=task
+        - MYSQL_PASSWORD=task
+        ports:
+        - "3306:3306"
+        volumes:
+        - /opt/mysql_data:/var/lib/mysql
+    eureka:
+        image: tai2020_eureka
+        build: netflix-eureka-naming-server/netflix-eureka-naming-server
+        ports:
+        - "8761:8761"
+    zipkin:
+        image: openzipkin/zipkin
+        ports:
+        - "9411:9411"        
+    api-gateway:
+        image: tai2020_api-gateway
+        build: netflix-zuul-api-gateway-server/netflix-zuul-api-gateway-server
+        ports:
+        - "8765:8765"
+        depends_on:
+        - eureka
+        - zipkin
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
+        - spring.zipkin.baseUrl=http://zipkin:9411/        
+    air-service:
+        image: tai2020_air-service
+        build: air-service/air-service
+        ports:
+        - "8300:8300" 
+        depends_on:
+        - eureka
+        - zipkin
+        - api-gateway
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+        - spring.zipkin.baseUrl=http://zipkin:9411/        
+    quotes-service:
+        image: tai2020_quotes-service
+        build: quotes-service/quotes-service
+        ports:
+        - "8000:8000"
+        depends_on:
+        - eureka
+        - zipkin
+        - api-gateway        
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+        - spring.zipkin.baseUrl=http://zipkin:9411/
+    images-service:
+        image: tai2020_images-service
+        build: images-service/images-service
+        ports:
+        - "8100:8100"
+        depends_on:
+        - eureka
+        - zipkin
+        - api-gateway        
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
+        - spring.zipkin.baseUrl=http://zipkin:9411/        
+    tasks-service:
+        image: tai2020_tasks-service
+        build: tasks-service/tasks-service
+        ports:
+        - "8200:8200"
+        depends_on:
+        - eureka
+        - zipkin
+        - api-gateway        
+        - mysql
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/  
+        - spring.zipkin.baseUrl=http://zipkin:9411/        
+        - SPRING_DATASOURCE_USERNAME=task
+        - SPRING_DATASOURCE_PASSWORD=task        
+        - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/task_crud?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true       
+        
+        

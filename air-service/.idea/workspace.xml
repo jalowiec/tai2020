@@ -12,6 +12,7 @@
     <list default="true" id="19627792-ea2d-411f-8065-5043da037701" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +115,8 @@
       <workItem from="1607874882705" duration="7985000" />
       <workItem from="1607894304552" duration="395000" />
       <workItem from="1607954971407" duration="20000" />
+      <workItem from="1610214813487" duration="455000" />
+      <workItem from="1610637414843" duration="324000" />
     </task>
     <servers />
   </component>

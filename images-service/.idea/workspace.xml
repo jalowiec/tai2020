@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92d6c6ac-7602-47b5-b50a-bf2ac5978187" name="Default Changelist" comment="" />
+    <list default="true" id="92d6c6ac-7602-47b5-b50a-bf2ac5978187" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +84,7 @@
       <workItem from="1607870949006" duration="10158000" />
       <workItem from="1607891373015" duration="1546000" />
       <workItem from="1607894198283" duration="97000" />
+      <workItem from="1610215019974" duration="239000" />
     </task>
     <servers />
   </component>
