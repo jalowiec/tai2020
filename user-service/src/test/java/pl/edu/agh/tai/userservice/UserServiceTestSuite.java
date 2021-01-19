@@ -1,6 +1,6 @@
 package pl.edu.agh.tai.userservice;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import pl.edu.agh.tai.userservice.domain.User;
 import pl.edu.agh.tai.userservice.repository.UserRepository;
 import pl.edu.agh.tai.userservice.service.UserService;
