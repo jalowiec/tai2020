@@ -135,7 +135,7 @@ public class UserRepository {
             Transaction tx = session.beginTransaction();
 
             Query q = session.createNativeQuery("SELECT UserID, Latitude, Longitude FROM coordinates where UserID = ?", Coordinates.class).setParameter(1, userID);
-            coordinates = (Coordinates) q.getSingleResult();
+            coordinates = (Coordinates) q.getResultList();
 
             tx.commit();
         } catch (Exception e){

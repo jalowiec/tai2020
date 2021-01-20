@@ -1,7 +1,6 @@
 package pl.edu.agh.tai.userservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
@@ -12,7 +11,7 @@ public class Coordinates {
 
     @Id
     @Column(name = "UserID")
-    private int UserID;
+    private int userID;
 
     @Column(name = "Latitude")
     private double Latitude;
@@ -33,17 +32,17 @@ public class Coordinates {
                        @JsonProperty("Latitude") double Latitude,
                        @JsonProperty("Longitude") double Longitude) {
 
-        this.UserID = UserID;
+        this.userID = userID;
         this.Latitude = Latitude;
         this.Longitude = Longitude;
     }
 
     public int getUserID() {
-        return UserID;
+        return userID;
     }
 
     public void setUserID(int userID) {
-        UserID = userID;
+        this.userID = userID;
     }
 
     public double getLatitude() {

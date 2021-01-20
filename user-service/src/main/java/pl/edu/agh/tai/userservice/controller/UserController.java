@@ -1,20 +1,23 @@
 package pl.edu.agh.tai.userservice.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.agh.tai.userservice.domain.Coordinates;
 import pl.edu.agh.tai.userservice.domain.Hobby;
 import pl.edu.agh.tai.userservice.domain.User;
+import pl.edu.agh.tai.userservice.service.CoordinatesService;
 import pl.edu.agh.tai.userservice.service.UserService;
 
 import java.util.List;
 
 
 @RestController
-@RequestMapping("/user-manager")
+@RequestMapping("/users/{userID}")
 public class UserController {
 
     private final UserService userService;
-
+    @Autowired
+    private CoordinatesService coordinatesService;
 
     public UserController(UserService userService) {
         this.userService = userService;
@@ -24,7 +27,7 @@ public class UserController {
     }
 
     // User CRUD
-    @RequestMapping(value = "/users/{userID}/getProfile")
+    @RequestMapping(value = "/getProfile")
     public User getProfile(@PathVariable(value = "userID") int userID){
         return userService.getProfile(userID);
     }
@@ -34,41 +37,42 @@ public class UserController {
         userService.addProfile(user);
     }
 
-    @PostMapping(value = "/users/{userID}/updateProfile")
+    @PostMapping(value = "/updateProfile")
     public void updateProfile(@PathVariable(value = "userID") int userID,
                               @RequestBody User user){
         userService.updateProfile(user, userID);
     }
 
-    @DeleteMapping(value = "/users/{userID}/delete")
+    @DeleteMapping(value = "/delete")
     public void deleteProfile(@PathVariable(value = "userID") int userID){
         userService.deleteProfile(userID);
     }
 
     //coordinates CRUD
-    @RequestMapping(value = "/users/{userID}/coordinates/getCoordinates")
+    @RequestMapping(method = RequestMethod.GET, value = "/coordinates/getCoordinates")
     public Coordinates getCoordinates(@PathVariable(value = "userID") int userID){
-        return userService.getCoordinates(userID);
+        return coordinatesService.getCoordinates(userID);
+        //return new Coordinates(2.1, 3.2);
     }
 
-    @PostMapping(value = "/users/{userID}/coordinates/addCoordinates")
+    @PostMapping(value = "/coordinates/addCoordinates")
     public void addCoordinate(@PathVariable(value = "userID") int userID,
                               @RequestBody Coordinates coordinates){
         userService.addCoordinate(coordinates, userID);
     }
 
-    @PostMapping(value = "/users/{userID}/coordinates/updateCoordinates")
+    @PostMapping(value = "/coordinates/updateCoordinates")
     public void updateCoordinates(@PathVariable(value = "userID") int userID,
                                   @RequestBody Coordinates coordinates){
         userService.updateCoordinates(coordinates, userID);
     }
 
-    @DeleteMapping(value = "/users/{userID}/coordinates/delete")
+    @DeleteMapping(value = "/coordinates/delete")
     public void deleteCoordinates(@PathVariable(value = "userID") int userID) {
         userService.deleteCoordinates(userID);
     }
 
-    @RequestMapping(value = "/users/{userID}/hobbies")
+    @RequestMapping(value = "/hobbies")
     public List<Hobby> getHobbies(@PathVariable(value = "userID") int userID){
         return userService.getHobbies(userID);
     }
