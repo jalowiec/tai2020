@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 public class AirInfoMapper {
 
     public AirInfoDto airInfoToAirInfoDto(final AirInfo airInfo){
-        return new AirInfoDto(airInfo.getDescription(), airInfo.getAdvice(), airInfo.getColor());
+        return new AirInfoDto(airInfo.getDescription(), airInfo.getAdvice(), airInfo.getColor(), airInfo.getLatitude(), airInfo.getLongitude());
     }
 
     public AirInfo airInfoDtoToAirInfo(final AirInfoDto airInfoDto){
-        return new AirInfo(airInfoDto.getDescription(), airInfoDto.getAdvice(), airInfoDto.getColor());
+        return new AirInfo(airInfoDto.getDescription(), airInfoDto.getAdvice(), airInfoDto.getColor(), airInfoDto.getLatitude(), airInfoDto.getLongitude());
     }
 
 

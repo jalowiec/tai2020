@@ -1,6 +1,7 @@
 package pl.edu.agh.tai.userservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.agh.tai.userservice.domain.Coordinates;
 import pl.edu.agh.tai.userservice.domain.Hobby;
@@ -49,10 +50,9 @@ public class UserController {
     }
 
     //coordinates CRUD
-    @RequestMapping(method = RequestMethod.GET, value = "/coordinates/getCoordinates")
+    @RequestMapping(method = RequestMethod.GET, value = "/coordinates/getCoordinates", produces= MediaType.APPLICATION_JSON_VALUE)
     public Coordinates getCoordinates(@PathVariable(value = "userID") int userID){
         return coordinatesService.getCoordinates(userID);
-        //return new Coordinates(2.1, 3.2);
     }
 
     @PostMapping(value = "/coordinates/addCoordinates")
@@ -72,7 +72,7 @@ public class UserController {
         userService.deleteCoordinates(userID);
     }
 
-    @RequestMapping(value = "/hobbies")
+    @RequestMapping(method = RequestMethod.GET, value = "/hobbies", produces= MediaType.APPLICATION_JSON_VALUE)
     public List<Hobby> getHobbies(@PathVariable(value = "userID") int userID){
         return userService.getHobbies(userID);
     }
