@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.edu.agh.tai.userservice.domain.Coordinates;
 import pl.edu.agh.tai.userservice.domain.Hobby;
 import pl.edu.agh.tai.userservice.domain.User;
+import pl.edu.agh.tai.userservice.repository.HobbyRepository;
 import pl.edu.agh.tai.userservice.service.CoordinatesService;
 import pl.edu.agh.tai.userservice.service.UserService;
 
@@ -19,6 +20,9 @@ public class UserController {
     private final UserService userService;
     @Autowired
     private CoordinatesService coordinatesService;
+
+    @Autowired
+    private HobbyRepository hobbyRepository;
 
     public UserController(UserService userService) {
         this.userService = userService;
@@ -73,8 +77,11 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/hobbies", produces= MediaType.APPLICATION_JSON_VALUE)
+    //public List<Hobby> getHobbies(@PathVariable(value = "userID") int userID){
+   //     return userService.getHobbies(userID);
+   // }
     public List<Hobby> getHobbies(@PathVariable(value = "userID") int userID){
-        return userService.getHobbies(userID);
+        return hobbyRepository.findByHobbyOwner(userID);
     }
 
 

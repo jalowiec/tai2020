@@ -6,12 +6,12 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "hobbies", schema = "userservice")
+@Table(name = "hobbies")
 public class Hobby implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "HobbyID", nullable = false)
-    private int HobbyID;
+    private int id;
 
     @JsonIgnore
     @ManyToOne(cascade = CascadeType.ALL)
@@ -35,11 +35,11 @@ public class Hobby implements Serializable {
     }
 
     public int getHobby_id() {
-        return HobbyID;
+        return id;
     }
 
     public void setHobby_id(int HobbyID) {
-        this.HobbyID = HobbyID;
+        this.id = HobbyID;
     }
 
     public User getUser() {
