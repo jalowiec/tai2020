@@ -1,7 +1,6 @@
 package pl.edu.agh.tai.userservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
@@ -14,7 +13,7 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "UserID", nullable = false)
-    private int UserID;
+    private int id;
 
     @Column(name = "FirstName", nullable = false, columnDefinition = "varchar(30)")
     private String FirstName;
@@ -54,11 +53,11 @@ public class User implements Serializable {
     }
 
     public int getUser_id() {
-        return UserID;
+        return id;
     }
 
     public void setUser_id(int user_id) {
-        this.UserID = UserID;
+        this.id = id;
     }
 
     public String getFirst_name() {

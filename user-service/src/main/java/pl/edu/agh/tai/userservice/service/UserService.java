@@ -4,58 +4,58 @@ import org.springframework.stereotype.Component;
 import pl.edu.agh.tai.userservice.domain.Coordinates;
 import pl.edu.agh.tai.userservice.domain.Hobby;
 import pl.edu.agh.tai.userservice.domain.User;
-import pl.edu.agh.tai.userservice.repository.UserRepository;
+import pl.edu.agh.tai.userservice.repository.UserSessionRepository;
 
 import java.util.List;
 
 @Component
 public class UserService {
 
-    private final UserRepository userRepository;
+    private final UserSessionRepository userSessionRepository;
 
     public UserService(){
-        this.userRepository = new UserRepository();
+        this.userSessionRepository = new UserSessionRepository();
     }
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserService(UserSessionRepository userSessionRepository) {
+        this.userSessionRepository = userSessionRepository;
     }
 
     public User getProfile(int userID){
-        return userRepository.getProfile(userID);
+        return userSessionRepository.getProfile(userID);
     }
 
 
 
     public List<Hobby> getHobbies(int userID) {
-        return userRepository.getHobbies(userID);
+        return userSessionRepository.getHobbies(userID);
     }
 
     public void addProfile(User user) {
-        userRepository.addProfile(user);
+        userSessionRepository.addProfile(user);
         }
 
     public void updateProfile(User user, int userID) {
-        userRepository.updateProfile(user, userID);
+        userSessionRepository.updateProfile(user, userID);
     }
 
     public void deleteProfile(int userID) {
-        userRepository.deleteProfile(userID);
+        userSessionRepository.deleteProfile(userID);
     }
 
     public Coordinates getCoordinates(int userID) {
-        return userRepository.getCoordinates(userID);
+        return userSessionRepository.getCoordinates(userID);
     }
 
     public void addCoordinate(Coordinates coordinates, int userID) {
 
-        userRepository.addCoordinates(coordinates, userID);
+        userSessionRepository.addCoordinates(coordinates, userID);
     }
 
     public void updateCoordinates(Coordinates coordinates, int userID) {
-        userRepository.updateCoordinates(coordinates, userID);
+        userSessionRepository.updateCoordinates(coordinates, userID);
     }
 
     public void deleteCoordinates(int userID) {
-        userRepository.deleteCoordinates(userID);
+        userSessionRepository.deleteCoordinates(userID);
     }
 }
