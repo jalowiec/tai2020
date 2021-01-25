@@ -21,7 +21,7 @@ public class AirInfoServiceController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-    @RequestMapping(method = RequestMethod.GET, value = "//air-infos/air-info", produces= MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET, value = "/air-infos/air-info", produces= MediaType.APPLICATION_JSON_VALUE)
     @HystrixCommand(fallbackMethod = "getDefaultAirInfo")
     public AirInfoDto getAirInfo(@PathVariable(value = "id") int pathUserId){
 

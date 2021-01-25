@@ -11,11 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="19627792-ea2d-411f-8065-5043da037701" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/pl/edu/agh/tai/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/pl/edu/agh/tai/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/Quote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuoteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuoteDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuoteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuoteMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../quotes-service/quotes-service/src/main/java/com/edu/agh/tai/quotesservice/QuotesServiceController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +122,7 @@
       <workItem from="1610637414843" duration="324000" />
       <workItem from="1611166373407" duration="536000" />
       <workItem from="1611486144440" duration="13298000" />
+      <workItem from="1611583084734" duration="2756000" />
     </task>
     <servers />
   </component>
