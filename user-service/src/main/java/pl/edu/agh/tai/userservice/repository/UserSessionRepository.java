@@ -147,24 +147,7 @@ public class UserSessionRepository {
         return coordinates;
     }
 
-    public void addCoordinates(Coordinates coordinates, int userID) {
-        try {
-            sessionFactory = getSessionFactory();
-            session = sessionFactory.openSession();
-            Transaction tx = session.beginTransaction();
 
-            coordinates.setUser(session.get(User.class, userID));
-
-            session.save(coordinates);
-
-            tx.commit();
-
-        } catch (Exception e){
-            e.printStackTrace();
-
-            System.err.println("------------------------Exception caught------------------");
-        }
-    }
 
     public void updateCoordinates(Coordinates coordinates, int userID){
         try {

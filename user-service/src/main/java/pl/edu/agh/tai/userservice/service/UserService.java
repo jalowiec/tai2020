@@ -46,11 +46,6 @@ public class UserService {
         return userSessionRepository.getCoordinates(userID);
     }
 
-    public void addCoordinate(Coordinates coordinates, int userID) {
-
-        userSessionRepository.addCoordinates(coordinates, userID);
-    }
-
     public void updateCoordinates(Coordinates coordinates, int userID) {
         userSessionRepository.updateCoordinates(coordinates, userID);
     }

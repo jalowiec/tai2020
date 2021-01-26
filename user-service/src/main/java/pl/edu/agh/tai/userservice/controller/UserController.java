@@ -8,7 +8,6 @@ import pl.edu.agh.tai.userservice.domain.Hobby;
 import pl.edu.agh.tai.userservice.domain.User;
 import pl.edu.agh.tai.userservice.repository.HobbyRepository;
 import pl.edu.agh.tai.userservice.repository.UserRepository;
-import pl.edu.agh.tai.userservice.service.CoordinatesService;
 import pl.edu.agh.tai.userservice.service.UserService;
 
 import java.util.List;

@@ -2,6 +2,7 @@ package pl.edu.agh.tai.userservice.repository;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import pl.edu.agh.tai.userservice.domain.Coordinates;
 import pl.edu.agh.tai.userservice.domain.Hobby;
@@ -14,5 +15,7 @@ public interface HobbyRepository extends CrudRepository<Hobby, Long> {
 
     @Query(value = "SELECT * FROM HOBBIES WHERE USERID = ?1", nativeQuery = true)
     List<Hobby> findByHobbyOwner(int userId);
+
+
 }
 

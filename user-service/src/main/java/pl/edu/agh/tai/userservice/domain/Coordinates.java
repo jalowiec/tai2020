@@ -19,16 +19,16 @@ public class Coordinates {
     @Column(name = "Longitude")
     private double Longitude;
 
-    @JsonIgnore
+  /*  @JsonIgnore
     @OneToOne(cascade = CascadeType.PERSIST)
     @MapsId
     @JoinColumn(name = "UserID")
     private User user;
-
+*/
     public Coordinates() {
     }
 
-    public Coordinates(/*@JsonProperty("UserID") int UserID,*/
+    public Coordinates(int userID,
                        @JsonProperty("Latitude") double Latitude,
                        @JsonProperty("Longitude") double Longitude) {
 
@@ -61,13 +61,7 @@ public class Coordinates {
         this.Longitude = Longitude;
     }
 
-    public User getUser() {
-        return user;
-    }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     @Override
     public String toString() {

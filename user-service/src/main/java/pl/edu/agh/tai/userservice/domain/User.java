@@ -37,10 +37,11 @@ public class User implements Serializable {
     )
     private Set<Feature> userfeature;
 
+  /*
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
     private Coordinates coordinates;
-
+*/
     public User() {
     }
 
