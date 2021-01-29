@@ -29,7 +29,7 @@ public class QuotesServiceController {
     @HystrixCommand(fallbackMethod = "getDefaultQuote")
     public QuoteDto getQuote(@PathVariable(value = "id") int pathUserId){
 
-        final String uri = "http://localhost:8080/users/" + pathUserId +"/hobbies";
+        final String uri = "http://localhost:8080/users/" + pathUserId +"/hobby";
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class);
         JsonArray jsonArray = JsonParser.parseString(result).getAsJsonArray();

@@ -28,6 +28,7 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Hobby> hobbies;
 
+    /*
     @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(

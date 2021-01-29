@@ -23,7 +23,7 @@ public class HobbyController {
 
     @PostMapping(value = "/hobby")
     public void addHobby(@RequestBody HobbyRequestBody hobbyRequestBody, @PathVariable(value = "userId") int userID){
-        Hobby hobbyToAdd = new Hobby(userRepository.findById(userID), hobbyRequestBody.getDescription(), hobbyRequestBody.getName());
+        Hobby hobbyToAdd = new Hobby(userRepository.findById(userID), hobbyRequestBody.getName(), hobbyRequestBody.getDescription());
         hobbyRepository.save(hobbyToAdd);
     }
 

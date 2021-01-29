@@ -25,7 +25,7 @@ public class AirInfoServiceController {
     @HystrixCommand(fallbackMethod = "getDefaultAirInfo")
     public AirInfoDto getAirInfo(@PathVariable(value = "id") int pathUserId){
 
-        final String uri = "http://localhost:8080//users/" + pathUserId +"/coordinates/getCoordinates";
+        final String uri = "http://localhost:8080//users/" + pathUserId +"/coordinates";
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class);
         JsonObject jsonObject = JsonParser.parseString(result).getAsJsonObject();
