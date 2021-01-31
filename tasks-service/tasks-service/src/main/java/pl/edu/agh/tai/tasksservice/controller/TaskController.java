@@ -4,6 +4,7 @@ package pl.edu.agh.tai.tasksservice.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.agh.tai.tasksservice.domain.TaskDto;
 import pl.edu.agh.tai.tasksservice.mapper.TaskMapper;
@@ -14,7 +15,7 @@ import java.util.List;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping("/users/{id}")
+@RequestMapping("/users/{userId}")
 public class TaskController {
 
 
@@ -26,14 +27,15 @@ public class TaskController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @RequestMapping(method = RequestMethod.GET, value = "/tasks")
-    public List<TaskDto> getTasks(){
+    @RequestMapping(method = RequestMethod.GET, value = "/tasks", produces= MediaType.APPLICATION_JSON_VALUE)
+    public List<TaskDto> getTasksByUserId(@PathVariable(value = "userId") int userId){
 
         logger.info("getTasks");
-        return taskMapper.mapToTaskDtoList(service.getAllTasks());
+        //return taskMapper.mapToTaskDtoList(service.getAllTasks());
+        return taskMapper.mapToTaskDtoList(service.getTasksByUserId(userId));
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/tasks/{taskId}")
+    @RequestMapping(method = RequestMethod.GET, value = "/tasks/{taskId}", produces= MediaType.APPLICATION_JSON_VALUE)
     public TaskDto getTask(@PathVariable Long taskId) throws TaskNotFoundException
     {
         logger.info("getTask");

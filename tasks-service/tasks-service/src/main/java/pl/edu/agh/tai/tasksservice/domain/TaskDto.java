@@ -4,14 +4,16 @@ public class TaskDto {
     private Long id;
     private String title;
     private String content;
+    private int userId;
 
     public TaskDto() {
     }
 
-    public TaskDto(Long id, String title, String content) {
+    public TaskDto(Long id, String title, String content, int userId) {
         this.id = id;
         this.title = title;
         this.content = content;
+        this.userId = userId;
     }
 
     @Override
@@ -44,5 +46,9 @@ public class TaskDto {
 
     public String getContent() {
         return content;
+    }
+
+    public int getUserId() {
+        return userId;
     }
 }
