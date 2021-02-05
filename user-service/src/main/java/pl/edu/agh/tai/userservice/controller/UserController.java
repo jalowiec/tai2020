@@ -34,4 +34,13 @@ public class UserController {
         return userRepository.findById(userID);
     }
 
+
+    @RequestMapping(method = RequestMethod.GET, value = "/callback", produces= MediaType.APPLICATION_JSON_VALUE)
+    //public void callback(@PathVariable(value = "userId") int userId){
+    public void callback(){
+
+        System.out.println("################callback");
+
+    }
+
 }

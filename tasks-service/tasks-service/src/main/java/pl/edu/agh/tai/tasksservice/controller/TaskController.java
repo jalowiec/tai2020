@@ -5,12 +5,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.agh.tai.tasksservice.domain.TaskDto;
 import pl.edu.agh.tai.tasksservice.mapper.TaskMapper;
 import pl.edu.agh.tai.tasksservice.service.DbService;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
@@ -33,6 +37,14 @@ public class TaskController {
         logger.info("getTasks");
         //return taskMapper.mapToTaskDtoList(service.getAllTasks());
         return taskMapper.mapToTaskDtoList(service.getTasksByUserId(userId));
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/token", produces= MediaType.APPLICATION_JSON_VALUE)
+    public Map<String, Object> token(@AuthenticationPrincipal Jwt jwt){
+
+        return Collections.singletonMap("principal", jwt);
+        //return taskMapper.mapToTaskDtoList(service.getAllTasks());
+        //return taskMapper.mapToTaskDtoList(service.getTasksByUserId(userId));
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/tasks/{taskId}", produces= MediaType.APPLICATION_JSON_VALUE)
