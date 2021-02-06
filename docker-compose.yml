@@ -50,9 +50,11 @@ services:
         depends_on:
         - eureka
         - zipkin
+        - keycloak
         environment: 
         - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
-        - spring.zipkin.baseUrl=http://zipkin:9411/      
+        - spring.zipkin.baseUrl=http://zipkin:9411/  
+        - spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8180/auth/realms/tai/protocol/openid-connect/certs                
     images-service:
         build: images-service/images-service
         ports:
