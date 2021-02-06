@@ -1,8 +1,15 @@
 version: "3.8"
-services:
 
+
+volumes:
+    mysql_data:
+        driver: local
+
+services:
     mysql:
         image: mysql
+        volumes:
+        - mysql_data:/var/lib/mysql
         environment:
         - MYSQL_ROOT_PASSWORD=task_crud
         - MYSQL_DATABASE=task_crud
@@ -11,60 +18,60 @@ services:
         ports:
         - "3306:3306"
         volumes:
-        - /opt/mysql_data:/var/lib/mysql    
+        - mysql_data:/var/lib/mysql
     keycloak:
-      image: jboss/keycloak
-      command: 
-        -Djboss.socket.binding.port-offset=100
-      environment:
-        DB_VENDOR: MYSQL
-        DB_ADDR: mysql
-        DB_DATABASE: task_crud
-        DB_USER: task
-        DB_PASSWORD: task
-        KEYCLOAK_USER: admin
-        KEYCLOAK_PASSWORD: admin
-      ports:
-        - 8180:8180
-      depends_on:
+        image: jboss/keycloak
+        command: 
+            -Djboss.socket.binding.port-offset=100
+        environment:
+            DB_VENDOR: MYSQL
+            DB_ADDR: mysql
+            DB_DATABASE: task_crud
+            DB_USER: task
+            DB_PASSWORD: task
+            KEYCLOAK_USER: admin
+            KEYCLOAK_PASSWORD: admin
+        ports:
+        - "8180:8180"
+        depends_on:
         - mysql
-#    keycloak:
-#        image: jboss/keycloak
-#        environment:
-#        - DB_VENDOR=MYSQL
-#        - DB_ADDR=mysql
-#        - DB_DATABASE=task_crud
-#        - DB_USER=task
-#        - DB_PASSWORD=task
-#        - KEYCLOAK_USER=admin
-#        - KEYCLOAK_PASSWORD=admin
-#        ports:
-#        - "8182:8182"
-#        depends_on:
-#        - mysql        
-#docker run --name keycloak --net keycloak-network -p 8080:8080 -e DB_VENDOR=mssql -e DB_USER=sa -e DB_PASSWORD=Password!23 -e DB_ADDR=mssql -e DB_DATABASE=Keycloak -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin jboss/keycloak                
-#    eureka:
-#        build: netflix-eureka-naming-server/netflix-eureka-naming-server
-#        ports:
-#        - "8761:8761"
-#    zipkin:
-#        image: openzipkin/zipkin
-#        ports:
-#        - "9411:9411"        
-#    api-gateway:
-#        build: netflix-zuul-api-gateway-server/netflix-zuul-api-gateway-server
-#        ports:
-#        - "8765:8765"
-#        depends_on:
-#        - eureka
-#        - zipkin
-#        environment: 
-#        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
-#        - spring.zipkin.baseUrl=http://zipkin:9411/        
-#    air-service:
-#        build: air-service/air-service
-#        ports:
-#        - "8300:8300" 
+    eureka:
+        build: netflix-eureka-naming-server/netflix-eureka-naming-server
+        ports:
+        - "8761:8761"
+    zipkin:
+        image: openzipkin/zipkin
+        ports:
+        - "9411:9411"        
+    api-gateway:
+        build: netflix-zuul-api-gateway-server/netflix-zuul-api-gateway-server
+        ports:
+        - "8765:8765"
+        depends_on:
+        - eureka
+        - zipkin
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
+        - spring.zipkin.baseUrl=http://zipkin:9411/      
+    images-service:
+        build: images-service/images-service
+        ports:
+        - "8100:8100"
+        depends_on:
+        - eureka
+        - zipkin
+        - api-gateway        
+        - keycloak
+        environment: 
+        - WAIT_HOSTS=keycloak:8180
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
+        - spring.zipkin.baseUrl=http://zipkin:9411/
+#        - spring.security.oauth2.resourceserver.jwt.issuer-uri=http://keycloak:8180/auth/realms/tai  
+        - spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8180/auth/realms/tai/protocol/openid-connect/certs        
+##    air-service:
+##        build: air-service/air-service
+##        ports:
+##        - "8300:8300" 
 #        depends_on:
 #        - eureka
 #        - zipkin
@@ -83,26 +90,16 @@ services:
 #        environment: 
 #        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
 #        - spring.zipkin.baseUrl=http://zipkin:9411/
-#    images-service:
-#        build: images-service/images-service
-#        ports:
-#        - "8100:8100"
-#        depends_on:
-#        - eureka
-#        - zipkin
-#        - api-gateway        
-#        environment: 
-#        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/        
-#        - spring.zipkin.baseUrl=http://zipkin:9411/        
-#    tasks-service:
-#        build: tasks-service/tasks-service
-#        ports:
-#        - "8200:8200"
-#        depends_on:
-#        - eureka
-#        - zipkin
-#        - api-gateway        
-#        - mysql
+         
+##    tasks-service:
+##        build: tasks-service/tasks-service
+##        ports:
+##        - "8200:8200"
+##        depends_on:
+##        - eureka
+##        - zipkin
+##        - api-gateway        
+##        - mysql
 #        environment: 
 #        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/  
 #        - spring.zipkin.baseUrl=http://zipkin:9411/        

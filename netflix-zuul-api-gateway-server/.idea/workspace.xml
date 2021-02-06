@@ -5,6 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_8_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_oauth2_resource_server_2_3_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_3_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_3_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_core_5_3_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_jose_5_3_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_resource_server_5_3_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../images-service/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_3_5_RELEASE.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images-service/images-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/images-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images-service/images-service/src/main/java/pl/edu/agh/tai/imagesservice/ImagesServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/images-service/src/main/java/pl/edu/agh/tai/imagesservice/ImagesServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images-service/images-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/images-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -52,17 +67,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NetflixZuulApiGatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="netflix-zuul-api-gateway-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pl.edu.agh.tai.netflixzuulapigatewayserver.NetflixZuulApiGatewayServerApplication" />
@@ -100,6 +104,8 @@
       <workItem from="1611956363089" duration="2841000" />
       <workItem from="1612128221997" duration="2625000" />
       <workItem from="1612213639904" duration="2583000" />
+      <workItem from="1612606005683" duration="4269000" />
+      <workItem from="1612633475073" duration="18000" />
     </task>
     <servers />
   </component>
