@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d6c6ac-7602-47b5-b50a-bf2ac5978187" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/domain/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/domain/TaskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/domain/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/domain/TaskDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
