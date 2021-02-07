@@ -8,7 +8,9 @@
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/netflix-zuul-api-gateway-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/netflix-zuul-api-gateway-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/domain/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/domain/TaskDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,8 @@
       <workItem from="1612606084760" duration="1674000" />
       <workItem from="1612608432850" duration="9529000" />
       <workItem from="1612633500418" duration="2417000" />
-      <workItem from="1612643717221" duration="1238000" />
+      <workItem from="1612643717221" duration="3473000" />
+      <workItem from="1612692371598" duration="1204000" />
     </task>
     <servers />
   </component>

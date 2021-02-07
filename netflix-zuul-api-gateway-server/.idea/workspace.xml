@@ -8,7 +8,9 @@
       <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../images-service/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/netflix-zuul-api-gateway-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/domain/TaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/java/pl/edu/agh/tai/tasksservice/domain/TaskDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks-service/tasks-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,17 +56,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NetflixZuulApiGatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="netflix-zuul-api-gateway-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pl.edu.agh.tai.netflixzuulapigatewayserver.NetflixZuulApiGatewayServerApplication" />
@@ -104,7 +95,9 @@
       <workItem from="1612213639904" duration="2583000" />
       <workItem from="1612606005683" duration="4269000" />
       <workItem from="1612633475073" duration="18000" />
-      <workItem from="1612643787977" duration="2951000" />
+      <workItem from="1612643787977" duration="3542000" />
+      <workItem from="1612691151664" duration="993000" />
+      <workItem from="1612695388428" duration="839000" />
     </task>
     <servers />
   </component>

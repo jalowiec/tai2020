@@ -8,18 +8,16 @@ import org.springframework.http.MediaType;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
+import pl.edu.agh.tai.tasksservice.domain.Task;
 import pl.edu.agh.tai.tasksservice.domain.TaskDto;
 import pl.edu.agh.tai.tasksservice.mapper.TaskMapper;
 import pl.edu.agh.tai.tasksservice.service.DbService;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @RestController
-@RequestMapping("/users/{userId}")
 public class TaskController {
 
 
@@ -31,44 +29,67 @@ public class TaskController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @RequestMapping(method = RequestMethod.GET, value = "/tasks", produces= MediaType.APPLICATION_JSON_VALUE)
-    public List<TaskDto> getTasksByUserId(@PathVariable(value = "userId") int userId){
-
-        logger.info("getTasks");
-        //return taskMapper.mapToTaskDtoList(service.getAllTasks());
+    private List<TaskDto> getTasksByUserId(int userId){
         return taskMapper.mapToTaskDtoList(service.getTasksByUserId(userId));
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/token", produces= MediaType.APPLICATION_JSON_VALUE)
-    public Map<String, Object> token(@AuthenticationPrincipal Jwt jwt){
 
-        return Collections.singletonMap("principal", jwt);
-        //return taskMapper.mapToTaskDtoList(service.getAllTasks());
-        //return taskMapper.mapToTaskDtoList(service.getTasksByUserId(userId));
+    @RequestMapping(method = RequestMethod.GET, value = "/tasks", produces= MediaType.APPLICATION_JSON_VALUE)
+    public List<TaskDto> getTasks(@AuthenticationPrincipal Jwt jwt){
+        return getTasksByUserId(getUserIdFromKeycloakUser(jwt.getClaims().get("preferred_username").toString()));
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/tasks/{taskId}", produces= MediaType.APPLICATION_JSON_VALUE)
-    public TaskDto getTask(@PathVariable Long taskId) throws TaskNotFoundException
+    public TaskDto getTask(@PathVariable Long taskId, @AuthenticationPrincipal Jwt jwt) throws TaskNotFoundException
     {
-        logger.info("getTask");
-        return taskMapper.mapToTaskDto(service.getTaskById(taskId).orElseThrow(TaskNotFoundException::new));
-    }
-
-    @RequestMapping(method = RequestMethod.DELETE, value = "/tasks/{taskId}")
-    public void deleteTask(@PathVariable Long taskId){
-        logger.info("deleteTask");
-        service.deleteTask(taskId);
-    }
-
-    @RequestMapping(method = RequestMethod.PUT, value = "/tasks")
-    public TaskDto updateTask(@RequestBody TaskDto taskDto){
-        logger.info("updateTask");
-        return taskMapper.mapToTaskDto(service.saveTask(taskMapper.mapToTask(taskDto)));
+        Optional<Task> task = service.getTaskById(taskId);
+        if(task.get().getUserId() == getUserIdFromKeycloakUser(jwt.getClaims().get("preferred_username").toString())){
+            return taskMapper.mapToTaskDto(service.getTaskById(taskId).orElseThrow(TaskNotFoundException::new));
+        }
+        else {
+            throw new TaskNotFoundException();
+        }
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/tasks", consumes = APPLICATION_JSON_VALUE)
-    public void createTask(@RequestBody TaskDto taskDto){
-        logger.info("createTask");
+    public void createTask(@RequestBody TaskDto taskDto, @AuthenticationPrincipal Jwt jwt){
+        taskDto.setUserId(getUserIdFromKeycloakUser(jwt.getClaims().get("preferred_username").toString()));
         service.saveTask(taskMapper.mapToTask(taskDto));
     }
+
+    @RequestMapping(method = RequestMethod.DELETE, value = "/tasks/{taskId}")
+    public void deleteTask(@PathVariable Long taskId, @AuthenticationPrincipal Jwt jwt) throws TaskNotFoundException {
+        Optional<Task> task = service.getTaskById(taskId);
+        if(task.get().getUserId() == getUserIdFromKeycloakUser(jwt.getClaims().get("preferred_username").toString())) {
+            service.deleteTask(taskId);
+        } else {
+            throw new TaskNotFoundException();
+        }
+    }
+
+
+    @RequestMapping(method = RequestMethod.PUT, value = "/tasks")
+    public TaskDto updateTask(@RequestBody TaskDto taskDto, @AuthenticationPrincipal Jwt jwt) throws TaskNotFoundException {
+        Long taskId = taskDto.getId();
+        Optional<Task> task = service.getTaskById(taskId);
+        if(task.isPresent()){
+            if(task.get().getUserId() == getUserIdFromKeycloakUser(jwt.getClaims().get("preferred_username").toString())) {
+                taskDto.setUserId(task.get().getUserId());
+                return taskMapper.mapToTaskDto(service.saveTask(taskMapper.mapToTask(taskDto)));
+            }
+        }
+        return null;
+    }
+
+
+
+    private int getUserIdFromKeycloakUser(String keyCloakUser){
+        Map<String, Integer> map = new HashMap<>();
+        map.put("tai1", 1);
+        map.put("tai2", 2);
+        map.put("tai3", 3);
+        return map.get(keyCloakUser);
+    }
+
+
 }

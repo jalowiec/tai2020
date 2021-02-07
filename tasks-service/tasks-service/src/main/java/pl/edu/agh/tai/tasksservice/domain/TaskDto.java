@@ -15,6 +15,11 @@ public class TaskDto {
         this.content = content;
         this.userId = userId;
     }
+    public TaskDto(Long id, String title, String content) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -48,7 +53,12 @@ public class TaskDto {
         return content;
     }
 
+
     public int getUserId() {
         return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }
