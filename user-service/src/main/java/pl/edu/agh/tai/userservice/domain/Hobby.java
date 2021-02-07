@@ -11,10 +11,10 @@ public class Hobby implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "HobbyID", nullable = false)
-    private int id;
+    private long id;
 
     @JsonIgnore
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "UserID")
     private User user;
 
@@ -34,7 +34,7 @@ public class Hobby implements Serializable {
         this.Description = Description;
     }
 
-    public int getHobby_id() {
+    public long getHobby_id() {
         return id;
     }
 
@@ -55,7 +55,7 @@ public class Hobby implements Serializable {
     }
 
     public void setName(String name) {
-        this.Name = Name;
+        this.Name = name;
     }
 
     public String getDescription() {
@@ -63,6 +63,6 @@ public class Hobby implements Serializable {
     }
 
     public void setDescription(String description) {
-        this.Description = Description;
+        this.Description = description;
     }
 }

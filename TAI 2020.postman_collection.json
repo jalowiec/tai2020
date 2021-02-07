@@ -1,0 +1,697 @@
+{
+	"info": {
+		"_postman_id": "c3fb6de6-7f3e-4556-a0c9-d69ce7fc65b0",
+		"name": "TAI 2020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "code grant authorize",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8180/auth/realms/tai/protocol/openid-connect/auth?client_id=tai&response_type=code&scope=openid profile&redirect_uri=http://localhost:8080/callback&state=asfwerwsdfwe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"auth",
+						"realms",
+						"tai",
+						"protocol",
+						"openid-connect",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "tai"
+						},
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8080/callback"
+						},
+						{
+							"key": "state",
+							"value": "asfwerwsdfwe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "code grant authorize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "tai",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "ff680d2d-c909-44ed-ae3d-b054a67f37d0",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://localhost:8080/callback",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "profile",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8180/auth/realms/tai/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8180",
+					"path": [
+						"auth",
+						"realms",
+						"tai",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IMAGE-SERVICE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/image-service/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"image-service",
+						"image"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TASKS-SERVICE",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/task-service/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"task-service",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TASKS-SERVICE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\":\"task 1 user 1\",\n\"content\":\"wyniesienie smieci w poniedzialek\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8765/api/task-service/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"task-service",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TASKS-SERVICE",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\":1,\n\"title\":\"wyniesienie smieci\",\n\"content\":\"wyniecienie smieci w poniedziałek\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8765/api/task-service/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"task-service",
+						"tasks"
+					],
+					"query": [
+						{
+							"key": "\"content\"",
+							"value": "\"testing\"",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TASKS-SERVICE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/task-service/tasks/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"task-service",
+						"tasks",
+						"2"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MzgxMTksImlhdCI6MTYxMjcwMjE0NCwiYXV0aF90aW1lIjoxNjEyNzAyMTE5LCJqdGkiOiI5MGIzMGFlZS1lYjZmLTRlYTAtODQxNC04MDQ5MTQ5ZWQ4ZjMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIxNTBhYzYxOS05YTlhLTRiZDUtODk4NC1kODZmMjUyOTQzMWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.ZqCLncF3R5XH9pIT9enRewCDXIDMIYLGFU9yboHsOPuz-Iuqity3upbU1McIwM2VOrv-UCiAhwh1BHZmrVe0TZbLwMLLq1B0kjsFgn0szy4WtDB9YzuNZG-F3F0R7iL2EMyliuSB0NM5u-vYSx0zZPA_7uQvAU7WgvxackWboBhp2p00AHj_vajr_ikvobKyICdeJWzvPwkShlO7lUbsnIdNFffyRuYf6T8Lc2fC2Yldvpu7OG1QZOK9FHV7gVYoT_TWoZc6zJRqmNP2N9hZr7UL5NW9xZ6BGPzNlvR_4-oEfSwbb0SxHtW7O5YnRzBqZo0aUgXG4ocdBk5sUzhXFQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/user-service/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user-service",
+						"user"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"first_name\":\"JanU\",\n\"surname\":\"NowakU\",\n\"email\":\"jan.nowaU@tai.agh.edu.pl\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8765/api/user-service/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user-service",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"first_name\":\"Jan\",\n\"surname\":\"Nowak\",\n\"email\":\"jan.nowU@tai.agh.edu.pl\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8765/api/user-service/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user-service",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE COORDINATES",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MzgxMTksImlhdCI6MTYxMjcwMjE0NCwiYXV0aF90aW1lIjoxNjEyNzAyMTE5LCJqdGkiOiI5MGIzMGFlZS1lYjZmLTRlYTAtODQxNC04MDQ5MTQ5ZWQ4ZjMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIxNTBhYzYxOS05YTlhLTRiZDUtODk4NC1kODZmMjUyOTQzMWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.ZqCLncF3R5XH9pIT9enRewCDXIDMIYLGFU9yboHsOPuz-Iuqity3upbU1McIwM2VOrv-UCiAhwh1BHZmrVe0TZbLwMLLq1B0kjsFgn0szy4WtDB9YzuNZG-F3F0R7iL2EMyliuSB0NM5u-vYSx0zZPA_7uQvAU7WgvxackWboBhp2p00AHj_vajr_ikvobKyICdeJWzvPwkShlO7lUbsnIdNFffyRuYf6T8Lc2fC2Yldvpu7OG1QZOK9FHV7gVYoT_TWoZc6zJRqmNP2N9hZr7UL5NW9xZ6BGPzNlvR_4-oEfSwbb0SxHtW7O5YnRzBqZo0aUgXG4ocdBk5sUzhXFQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/user-service/coordinates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user-service",
+						"coordinates"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE COORDINATES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \n    \n        \"Latitude\": 50.06823685648179,\n        \"Longitude\": 19.91463304438521\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:8765/api/user-service/coordinates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user-service",
+						"coordinates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE COORDINATES",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \n    \n        \"Latitude\": 50.06823685648178,\n        \"Longitude\": 19.91463304438522\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:8765/api/user-service/coordinates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user-service",
+						"coordinates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE COORDINATES",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8765/api/user-service/coordinates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user-service",
+						"coordinates"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE HOBBY",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MzgxMTksImlhdCI6MTYxMjcwMjE0NCwiYXV0aF90aW1lIjoxNjEyNzAyMTE5LCJqdGkiOiI5MGIzMGFlZS1lYjZmLTRlYTAtODQxNC04MDQ5MTQ5ZWQ4ZjMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIxNTBhYzYxOS05YTlhLTRiZDUtODk4NC1kODZmMjUyOTQzMWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.ZqCLncF3R5XH9pIT9enRewCDXIDMIYLGFU9yboHsOPuz-Iuqity3upbU1McIwM2VOrv-UCiAhwh1BHZmrVe0TZbLwMLLq1B0kjsFgn0szy4WtDB9YzuNZG-F3F0R7iL2EMyliuSB0NM5u-vYSx0zZPA_7uQvAU7WgvxackWboBhp2p00AHj_vajr_ikvobKyICdeJWzvPwkShlO7lUbsnIdNFffyRuYf6T8Lc2fC2Yldvpu7OG1QZOK9FHV7gVYoT_TWoZc6zJRqmNP2N9hZr7UL5NW9xZ6BGPzNlvR_4-oEfSwbb0SxHtW7O5YnRzBqZo0aUgXG4ocdBk5sUzhXFQ"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hobby",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hobby"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE HOBBY",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \n    \n        \"name\": \"art\",\n        \"description\": \"music, dance\"\n        }"
+				},
+				"url": {
+					"raw": "http://localhost:8765/api/user-service/hobby",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"user-service",
+						"hobby"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER-SERVICE HOBBY",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/hobby",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hobby"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AIR-SERVICE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/api/air/users/1/air-infos/air-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"air",
+						"users",
+						"1",
+						"air-infos",
+						"air-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "QUOTES-SERVICE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/api/quote/users/1/quotes/quote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"api",
+						"quote",
+						"users",
+						"1",
+						"quotes",
+						"quote"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

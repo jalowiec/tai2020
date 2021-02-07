@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="" />
+    <list default="true" id="e4be5810-e04f-43c3-9bb7-1e48d2df5ba8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/pl/edu/agh/tai/userservice/controller/HobbyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/pl/edu/agh/tai/userservice/controller/HobbyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/pl/edu/agh/tai/userservice/domain/Hobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/pl/edu/agh/tai/userservice/domain/Hobby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user-service/src/main/java/pl/edu/agh/tai/userservice/repository/HobbyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user-service/src/main/java/pl/edu/agh/tai/userservice/repository/HobbyRepository.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,6 +95,7 @@
       <workItem from="1612643787977" duration="3542000" />
       <workItem from="1612691151664" duration="993000" />
       <workItem from="1612695388428" duration="839000" />
+      <workItem from="1612721679909" duration="84000" />
     </task>
     <servers />
   </component>

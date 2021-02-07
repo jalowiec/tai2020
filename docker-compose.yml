@@ -16,7 +16,7 @@ services:
         - MYSQL_USER=task
         - MYSQL_PASSWORD=task
         ports:
-        - "3309:3309"
+        - "3306:3306"
         volumes:
         - mysql_data:/var/lib/mysql
     keycloak:
@@ -85,24 +85,24 @@ services:
  #       - spring.zipkin.baseUrl=http://zipkin:9411/        
  #       - SPRING_DATASOURCE_USERNAME=task
  #       - SPRING_DATASOURCE_PASSWORD=task        
- #       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3309/task_crud?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true        
+ #       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/task_crud?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true        
  #       - spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8180/auth/realms/tai/protocol/openid-connect/certs        
-#    user-service:
-#        build: user-service
-#        ports:
-#        - "8080:8080"
-#        depends_on:
-#        - eureka
-#        - zipkin
-#        - api-gateway        
-#        - mysql
-#        environment: 
-#        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/  
-#        - spring.zipkin.baseUrl=http://zipkin:9411/        
-#        - SPRING_DATASOURCE_USERNAME=task
-#        - SPRING_DATASOURCE_PASSWORD=task        
-#        - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3309/task_crud?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true       
-#        - spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8180/auth/realms/tai/protocol/openid-connect/certs
+    user-service:
+        build: user-service
+        ports:
+        - "8080:8080"
+        depends_on:
+        - eureka
+        - zipkin
+        - api-gateway        
+        - mysql
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/  
+        - spring.zipkin.baseUrl=http://zipkin:9411/        
+        - SPRING_DATASOURCE_USERNAME=task
+        - SPRING_DATASOURCE_PASSWORD=task        
+        - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/task_crud?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true       
+        - spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8180/auth/realms/tai/protocol/openid-connect/certs
 
 ##    air-service:
 ##        build: air-service/air-service
