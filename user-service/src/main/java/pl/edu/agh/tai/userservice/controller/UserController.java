@@ -36,13 +36,17 @@ public class UserController {
        }
 
     }
-    @RequestMapping(method = RequestMethod.PUT, value = "/user")
-    public User updateUser(@RequestBody User user, @AuthenticationPrincipal Jwt jwt)  {
-        User userFromRepository = userRepository.findById(getUserIdFromKeycloakUser(jwt.getClaims().get("preferred_username").toString()));
-        userFromRepository.setFirst_name(user.getFirst_name());
-        userFromRepository.setSurname(user.getSurname());
-        userFromRepository.setEmail(user.getEmail());
 
+    @RequestMapping(method = RequestMethod.PUT, value = "/user")
+    public User updateUser(@RequestBody User user, @AuthenticationPrincipal Jwt jwt) throws Exception {
+        User userFromRepository = userRepository.findById(getUserIdFromKeycloakUser(jwt.getClaims().get("preferred_username").toString()));
+        if(userFromRepository != null) {
+            userFromRepository.setFirst_name(user.getFirst_name());
+            userFromRepository.setSurname(user.getSurname());
+            userFromRepository.setEmail(user.getEmail());
+        } else{
+            throw new Exception("Nie znaleziono w bazie uzytkownika do zmiany");
+        }
         return userRepository.save(userFromRepository);
 
     }
