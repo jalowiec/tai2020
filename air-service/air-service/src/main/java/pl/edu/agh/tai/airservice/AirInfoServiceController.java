@@ -7,11 +7,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
-@RequestMapping("/users/{id}")
 public class AirInfoServiceController {
 
     @Autowired
@@ -21,11 +25,11 @@ public class AirInfoServiceController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-    @RequestMapping(method = RequestMethod.GET, value = "/air-infos/air-info", produces= MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET, value = "/air-info", produces= MediaType.APPLICATION_JSON_VALUE)
     @HystrixCommand(fallbackMethod = "getDefaultAirInfo")
-    public AirInfoDto getAirInfo(@PathVariable(value = "id") int pathUserId){
-
-        final String uri = "http://localhost:8080//users/" + pathUserId +"/coordinates";
+    public AirInfoDto getAirInfo(@AuthenticationPrincipal Jwt jwt){
+        System.out.println("#########");
+        final String uri = "http://localhost:8080/users/coordinates";
         RestTemplate restTemplate = new RestTemplate();
         String result = restTemplate.getForObject(uri, String.class);
         JsonObject jsonObject = JsonParser.parseString(result).getAsJsonObject();
@@ -65,6 +69,13 @@ public class AirInfoServiceController {
         return new AirInfoDto("No current info", "Check outside", "#FF0000", 0.0, 0.0);
     }
 
+    private int getUserIdFromKeycloakUser(String keyCloakUser){
+        Map<String, Integer> map = new HashMap<>();
+        map.put("tai1", 1);
+        map.put("tai2", 2);
+        map.put("tai3", 3);
+        return map.get(keyCloakUser);
+    }
 
 
 }

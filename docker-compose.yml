@@ -103,7 +103,7 @@ services:
         - SPRING_DATASOURCE_PASSWORD=task        
         - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/task_crud?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true       
         - spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8180/auth/realms/tai/protocol/openid-connect/certs
-
+#
 ##    air-service:
 ##        build: air-service/air-service
 ##        ports:

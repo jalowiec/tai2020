@@ -13,7 +13,7 @@ public interface HobbyRepository extends CrudRepository<Hobby, Long> {
 
     Optional<Hobby> findById(Long hobbyIdd);
 
-    @Query(value = "SELECT * FROM HOBBIES WHERE USERID = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM hobbies WHERE USERID = ?1", nativeQuery = true)
     List<Hobby> findByHobbyOwner(int userId);
 
 

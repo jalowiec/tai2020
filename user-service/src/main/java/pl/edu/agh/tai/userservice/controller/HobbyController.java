@@ -60,6 +60,7 @@ public class HobbyController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/hobby", produces= MediaType.APPLICATION_JSON_VALUE)
     public List<Hobby> getHobbies(@AuthenticationPrincipal Jwt jwt){
+
         return hobbyRepository.findByHobbyOwner(getUserIdFromKeycloakUser(jwt.getClaims().get("preferred_username").toString()));
     }
 
