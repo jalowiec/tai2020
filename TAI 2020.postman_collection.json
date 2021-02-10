@@ -522,7 +522,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8765/api/user-service/coordinates",
+					"raw": "http://localhost:8765/api/user-service/coordinates/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -531,7 +531,8 @@
 					"path": [
 						"api",
 						"user-service",
-						"coordinates"
+						"coordinates",
+						""
 					],
 					"query": [
 						{
@@ -552,17 +553,19 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MzgxMTksImlhdCI6MTYxMjcwMjE0NCwiYXV0aF90aW1lIjoxNjEyNzAyMTE5LCJqdGkiOiI5MGIzMGFlZS1lYjZmLTRlYTAtODQxNC04MDQ5MTQ5ZWQ4ZjMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIxNTBhYzYxOS05YTlhLTRiZDUtODk4NC1kODZmMjUyOTQzMWUiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.ZqCLncF3R5XH9pIT9enRewCDXIDMIYLGFU9yboHsOPuz-Iuqity3upbU1McIwM2VOrv-UCiAhwh1BHZmrVe0TZbLwMLLq1B0kjsFgn0szy4WtDB9YzuNZG-F3F0R7iL2EMyliuSB0NM5u-vYSx0zZPA_7uQvAU7WgvxackWboBhp2p00AHj_vajr_ikvobKyICdeJWzvPwkShlO7lUbsnIdNFffyRuYf6T8Lc2fC2Yldvpu7OG1QZOK9FHV7gVYoT_TWoZc6zJRqmNP2N9hZr7UL5NW9xZ6BGPzNlvR_4-oEfSwbb0SxHtW7O5YnRzBqZo0aUgXG4ocdBk5sUzhXFQ"
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI4NTQyMjAsImlhdCI6MTYxMjgxODI0NSwiYXV0aF90aW1lIjoxNjEyODE4MjIwLCJqdGkiOiJjMzU3ZWUyMC01NmQ3LTQyNTgtYWYwMi1lZmFjMGQ2OGVmNDIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiJlZGYxNGRkMC0yNDM2LTRkYjctYWQ4Yy0wYWQ4MjY2YWQxNDgiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.TS8YKYwP_IeMgpmsTSGzDajOOjHTT4E4MARZAM1JHLCC0ywduP-VuudyYp1H8XcS_byfoOYFAHoBHLJxYowZGl7ZpjOc3p2x0J1c7TeqMLVoLFcmQB6IJtFh1w68mVySJB7ftxN4QpE3zW9owKn2Vd_xvU90lRP7T2w04AYPTbIqwN3WaweNaKb4W7sWcA4aXVSe8FWSUjxAPSoG_Lg2FC9KjKXMoV6BTJqiEhSCcTX_dyID8W1KkTJSU8FWNWyH16MHMlGlqUFH5vTgGDIFt5Mk_62iKtTn2vUOX0VaoC9qyPtwk43YK5Fh7aEhgwfV692d3vYv2L6PvDf1sCQHiQ"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/hobby",
+					"raw": "http://localhost:8765/api/user-service/hobby",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8765",
 					"path": [
+						"api",
+						"user-service",
 						"hobby"
 					],
 					"query": [
@@ -621,18 +624,21 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI3MjgxMzgsImlhdCI6MTYxMjY5MjE2NSwiYXV0aF90aW1lIjoxNjEyNjkyMTM5LCJqdGkiOiI2MDM0YTlhZS0wZjhjLTRlNDYtODAyOC00MDEzMjdjNDk2ZDMiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIzYzhiYjAzZS1kZGExLTQzYWYtOTc4MC1mYjlkYzM0NTFkN2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.G65u8Jok8ptGHHcIInQwFv8VXlAQuY-Eiyp4-7VaNkZlNBMydaBVjI6gtFex2ntEZFJdwdsZD-qf_JsOAfVoTDNyarJFShFtLGtey_26zBh6nxjXWr1oE-Y2TcpCZBWm096Hrfyz9pDFSBYj1uRU42kC5UVIsXgr6g92ywz-JiyNwVGAvHaNbJNy1cam9UFECYNo2sMt933YSj76Y4fgnBxDeokMUmCIuVZUHIH4cK2Q849gQ-Z6bdCITsc9sFKPU9KBh_CQDE7_htTsa8GYsoe6rWinlCwc8GlFBU5VPoFefKCrZAFrAiD8lQ9dYZh81DoPrgeB3YeyZ_k-vzxpZw"
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI4NTQyMjAsImlhdCI6MTYxMjgxODI0NSwiYXV0aF90aW1lIjoxNjEyODE4MjIwLCJqdGkiOiJjMzU3ZWUyMC01NmQ3LTQyNTgtYWYwMi1lZmFjMGQ2OGVmNDIiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiJlZGYxNGRkMC0yNDM2LTRkYjctYWQ4Yy0wYWQ4MjY2YWQxNDgiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.TS8YKYwP_IeMgpmsTSGzDajOOjHTT4E4MARZAM1JHLCC0ywduP-VuudyYp1H8XcS_byfoOYFAHoBHLJxYowZGl7ZpjOc3p2x0J1c7TeqMLVoLFcmQB6IJtFh1w68mVySJB7ftxN4QpE3zW9owKn2Vd_xvU90lRP7T2w04AYPTbIqwN3WaweNaKb4W7sWcA4aXVSe8FWSUjxAPSoG_Lg2FC9KjKXMoV6BTJqiEhSCcTX_dyID8W1KkTJSU8FWNWyH16MHMlGlqUFH5vTgGDIFt5Mk_62iKtTn2vUOX0VaoC9qyPtwk43YK5Fh7aEhgwfV692d3vYv2L6PvDf1sCQHiQ"
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/hobby",
+					"raw": "http://localhost:8765/api/user-service/hobby/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8080",
+					"port": "8765",
 					"path": [
-						"hobby"
+						"api",
+						"user-service",
+						"hobby",
+						"4"
 					],
 					"query": [
 						{
@@ -649,9 +655,15 @@
 			"name": "AIR-SERVICE",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTMwMTk4OTUsImlhdCI6MTYxMjk4MzkyNywiYXV0aF90aW1lIjoxNjEyOTgzODk2LCJqdGkiOiJkY2ViNDEyNC01ZTU1LTRjNGEtOWU3Yi1lY2ZhNzgyMTM2NjkiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIyYWI1MzgzMC03YTY0LTRmMjEtYTA1ZC1lOTFiYmMzN2VlNjciLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.ON2kj90ZZpgyALju66uuhwk1ZS9E0F1Ue40_A3CIC7uU4oR3ItRNmyVDegnE2ORkajQ_EH-JHZ0CoY5qZVYyiBMS_rVFjjFc7q0HkjvYv-aYMbyn09QxPnQQXyzg0f5eH_sYbn77qXyuWvYt-mIHbY9F3s1JemDez8QcOGa0bW763HeyE5a0mvPZD7Jc1vnNgzm0qBKDzQaK8p3slOp4_mh9usbZdpDLYbhMsa6ZOaQ8C82EFaVZTwliI3rDdS3HAdpxRMsorl6eattucYkqBlJHJxJEH_UTlK46ckHBOmdClHPN9dKcns5kBJJVKWLwtepA--ygNaW1gkK5lOF5VA",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://localhost:8765/api/air/users/1/air-infos/air-info",
+					"raw": "http://localhost:8765/api/air-service/air-info",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -659,10 +671,7 @@
 					"port": "8765",
 					"path": [
 						"api",
-						"air",
-						"users",
-						"1",
-						"air-infos",
+						"air-service",
 						"air-info"
 					]
 				}

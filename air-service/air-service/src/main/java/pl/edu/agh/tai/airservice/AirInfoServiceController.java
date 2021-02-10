@@ -28,19 +28,14 @@ public class AirInfoServiceController {
     @RequestMapping(method = RequestMethod.GET, value = "/air-info", produces= MediaType.APPLICATION_JSON_VALUE)
     @HystrixCommand(fallbackMethod = "getDefaultAirInfo")
     public AirInfoDto getAirInfo(@AuthenticationPrincipal Jwt jwt){
-        System.out.println("#########1");
-        final String uri = "http://localhost:8080/coordinates";
+        final String uri = "http://user-service:8080/coordinates";
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTI5MzkxOTYsImlhdCI6MTYxMjkwMzIzMCwiYXV0aF90aW1lIjoxNjEyOTAzMTk2LCJqdGkiOiIwYjU4NzQ1MC0yYWJkLTRjN2MtOGNhZi02OGUxMDlhYzViZjEiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiI5MmFiYmE3OC00YThiLTRhOGItYTVmMS1lYmUyM2Q5MTJmNWEiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.kAvQx9IvSBEOXXhcLvaz84gOx3t-VeoHDr86e0hHTVPIblyKECX8pCiqZmpa1J--CUpfMuEFsF9_f7DreMo9EaOVaQB9HCnULMbHyEXOhlRB-YoWtRJstQz0Y0fk1wHf3FTormdvL9GHwj2GJcMXkPsFNQbEIcAY6bJqNoWbxxhUFJRW1Z_tekyGmNOby6_q9cg-DA2yqueJ86hWca_TC-Eh1Q5paagfduIS6qw_OC05_36hc-oM6x_bqkxTdLAxp-xTgb5r3M_68il9LAnNBpR9IKR2Ll1a--f0pnBiWQ9JkYpGq1WDVVG26PAY9ZW6GCf0AWoBLb4U7lfvAxsxdA");
-        System.out.println("#########2");
+        headers.set("Authorization", "Bearer " + jwt.getTokenValue());
         HttpEntity entity = new HttpEntity(headers);
         ResponseEntity<String> response = restTemplate.exchange(
                 uri, HttpMethod.GET, entity, String.class, "");
-        //String result = restTemplate.getForObject(uri, String.class);
-        System.out.println("#########3");
-        System.out.println("#########RESULT: " + response.getBody());
-        JsonObject jsonObject = JsonParser.parseString("test").getAsJsonObject();
+        JsonObject jsonObject = JsonParser.parseString(response.getBody()).getAsJsonObject();
         int userId = jsonObject.get("userID").getAsInt();
         double longitude = jsonObject.get("longitude").getAsDouble();
         double latitude = jsonObject.get("latitude").getAsDouble();

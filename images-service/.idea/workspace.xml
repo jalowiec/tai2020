@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92d6c6ac-7602-47b5-b50a-bf2ac5978187" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../netflix-zuul-api-gateway-server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../air-service/air-service/src/main/java/pl/edu/agh/tai/airservice/AirInfoServiceController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +91,7 @@
       <workItem from="1612633500418" duration="2417000" />
       <workItem from="1612643717221" duration="3473000" />
       <workItem from="1612692371598" duration="1204000" />
+      <workItem from="1612984181418" duration="68000" />
     </task>
     <servers />
   </component>
