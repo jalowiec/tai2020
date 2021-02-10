@@ -682,9 +682,15 @@
 			"name": "QUOTES-SERVICE",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJORDhWZkwtb2luTjN1RmRIYXlhbjlGWG1wVTk2WTgwZDdQSmthUzJYUDc4In0.eyJleHAiOjE2MTMwMTk4OTUsImlhdCI6MTYxMjk4MzkyNywiYXV0aF90aW1lIjoxNjEyOTgzODk2LCJqdGkiOiJkY2ViNDEyNC01ZTU1LTRjNGEtOWU3Yi1lY2ZhNzgyMTM2NjkiLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgxODAvYXV0aC9yZWFsbXMvdGFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjUzNmIyODhjLTc0ODgtNDE0YS1iZTI3LWZjMDI2Y2UzZDk5MyIsInR5cCI6IkJlYXJlciIsImF6cCI6InRhaSIsInNlc3Npb25fc3RhdGUiOiIyYWI1MzgzMC03YTY0LTRmMjEtYTA1ZC1lOTFiYmMzN2VlNjciLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0YWkxIn0.ON2kj90ZZpgyALju66uuhwk1ZS9E0F1Ue40_A3CIC7uU4oR3ItRNmyVDegnE2ORkajQ_EH-JHZ0CoY5qZVYyiBMS_rVFjjFc7q0HkjvYv-aYMbyn09QxPnQQXyzg0f5eH_sYbn77qXyuWvYt-mIHbY9F3s1JemDez8QcOGa0bW763HeyE5a0mvPZD7Jc1vnNgzm0qBKDzQaK8p3slOp4_mh9usbZdpDLYbhMsa6ZOaQ8C82EFaVZTwliI3rDdS3HAdpxRMsorl6eattucYkqBlJHJxJEH_UTlK46ckHBOmdClHPN9dKcns5kBJJVKWLwtepA--ygNaW1gkK5lOF5VA",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://localhost:8765/api/quote/users/1/quotes/quote",
+					"raw": "http://localhost:8765/api/quote-service/quote",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -692,10 +698,7 @@
 					"port": "8765",
 					"path": [
 						"api",
-						"quote",
-						"users",
-						"1",
-						"quotes",
+						"quote-service",
 						"quote"
 					]
 				}

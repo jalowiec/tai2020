@@ -115,16 +115,17 @@ services:
         environment: 
         - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
         - spring.zipkin.baseUrl=http://zipkin:9411/ 
+        - spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8180/auth/realms/tai/protocol/openid-connect/certs
+    quotes-service:
+        build: quotes-service/quotes-service
+        ports:
+        - "8000:8000"
+        depends_on:
+        - eureka
+        - zipkin
+        - api-gateway
+        - user-service        
+        environment: 
+        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
+        - spring.zipkin.baseUrl=http://zipkin:9411/
         - spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://keycloak:8180/auth/realms/tai/protocol/openid-connect/certs        
-#    quotes-service:
-#        build: quotes-service/quotes-service
-#        ports:
-#        - "8000:8000"
-#        depends_on:
-#        - eureka
-#        - zipkin
-#        - api-gateway        
-#        environment: 
-#        - eureka.client.serviceUrl.defaultZone=http://eureka:8761/eureka/
-#        - spring.zipkin.baseUrl=http://zipkin:9411/        
-#        

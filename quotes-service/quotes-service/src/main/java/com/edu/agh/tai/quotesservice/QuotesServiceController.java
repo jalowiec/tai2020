@@ -8,12 +8,13 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.http.*;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-@RequestMapping("/users/{id}")
 @CrossOrigin(origins = "*")
 public class QuotesServiceController {
 
@@ -25,14 +26,19 @@ public class QuotesServiceController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 
-    @RequestMapping(method = RequestMethod.GET, value = "/quotes/quote", produces= MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET, value = "/quote", produces= MediaType.APPLICATION_JSON_VALUE)
     @HystrixCommand(fallbackMethod = "getDefaultQuote")
-    public QuoteDto getQuote(@PathVariable(value = "id") int pathUserId){
+    public QuoteDto getQuote(@AuthenticationPrincipal Jwt jwt){
 
-        final String uri = "http://localhost:8080/users/" + pathUserId +"/hobby";
+        final String uri = "http://user-service:8080/hobby";
         RestTemplate restTemplate = new RestTemplate();
-        String result = restTemplate.getForObject(uri, String.class);
-        JsonArray jsonArray = JsonParser.parseString(result).getAsJsonArray();
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Authorization", "Bearer " + jwt.getTokenValue());
+        HttpEntity entity = new HttpEntity(headers);
+        ResponseEntity<String> response = restTemplate.exchange(
+                uri, HttpMethod.GET, entity, String.class, "");
+        JsonArray jsonArray = JsonParser.parseString(response.getBody()).getAsJsonArray();
+         //= JsonParser.parseString(result).getAsJsonArray();
         StringBuilder stringBuilder = new StringBuilder();
         for(int i=0; i<jsonArray.size()-1; i++){
             stringBuilder.append(jsonArray.get(i).getAsJsonObject().get("name").getAsString());
@@ -60,7 +66,7 @@ public class QuotesServiceController {
         return new Quote(quote, author, hobbies);
     }
 
-    private QuoteDto getDefaultQuote(int id){
+    private QuoteDto getDefaultQuote(@AuthenticationPrincipal Jwt jwt){
 
         logger.info("{}", "default author" + ":" + "default quote");
 
